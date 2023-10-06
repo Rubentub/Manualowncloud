@@ -17,8 +17,19 @@ Despues de actualizar la maquina he tenido que instalar varios servidores web qu
  - sudo apt install -y php libapache2-mod-php
  - sudo apt install -y php-fpm php-common php-mbstring php-xmlrpc php-soap php-gd php-xml php-intl php-mysql php-cli php-ldap php-zip php-curl
 
-~                                                                                                                                                                                                           
-~                                                                                                                                                                                                           
-~                                                                                                                                                                                                           
-~                                                                                                                                                                                                           
-~                                                                                                                                                                    
+Y he despues he tenido que reiniciar el servidor apache2 con este comando para salir de root y seguircon la practica.
+El comando es este:
+ - sudo systemctl restart apache2
+
+Una vez instalado varios servidores web,lo que tendremos que hacer es configurar el MySQL y para poder acceder a la consola de MySQL habra que ejecutar el siguiente comando que dire ahora:
+ - mysql
+
+Una vez ya hemos entrado en la consola de MySQL tendremos que crear una base de datos para que nos pueda funcionar el owncloud y vaya todo bien. 
+Es el siguiente comando:
+ - CREATE DATABASE bbdd;
+
+Despues de crear la base de datos, necesitamos crear un usuario con su contraseña para poder entrar en owncloud facilmente y que todo vaya bien:
+El comando es el siguiente:
+ - CREATE USER 'usuario'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+
+Una vez que hayamos creado nuestra base de datos y nuestro usuario con su perspectiva contraseña                                                                
